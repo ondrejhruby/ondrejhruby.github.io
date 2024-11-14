@@ -615,7 +615,7 @@
                     <!-- Testimonial End -->
 
                     <!-- Contact Start -->
-                    <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="contactForm">
+                    <section class="py-5 wow fadeInUp" data-wow-delay="0.1s">
                         <h1 class="text-center mb-4">Contact Me</h1>
                         <p class="text-center">Feel free to reach out using the form below.</p>
                         <form id="contactForm" class="needs-validation" novalidate>
@@ -692,7 +692,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <!-- EmailJS Form submission -->
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script type="text/javascript">
             (function() {
                 emailjs.init("Zw9P8e2mgRPZqdE3i"); // EmailJS user ID
@@ -709,6 +709,7 @@
                         subject: $('#subject').val(),
                         message: $('#message').val(),
                     };
+
 
                     // Send the email via EmailJS
                     emailjs.send("service_gfwm1ys", "template_9lhukad", templateParams)
