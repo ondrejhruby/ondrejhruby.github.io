@@ -615,33 +615,43 @@
                     <!-- Testimonial End -->
 
                     <!-- Contact Start -->
-                    <section class="py-5 wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="text-center mb-4">Contact Me</h1>
-                        <p class="text-center">Feel free to reach out using the form below.</p>
-                        <form id="contactForm" class="needs-validation" novalidate>
-                            <div class="row mb-3">
+                    <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="contactForm">
+                        <h1 class="title pb-3 mb-5">Contact Me</h1>
+                        <p class="mb-4">Feel free to reach out using the form below.</p>
+                        <form id="contactForm">
+                            <div class="row g-3">
                                 <div class="col-md-6">
-                                    <label for="name" class="form-label">Your Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0 bg-secondary" id="name" name="name" placeholder="Your Name" required>
+                                        <label for="name">Your Name</label>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="email" class="form-label">Your Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0 bg-secondary" id="email" name="email" placeholder="Your Email" required>
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0 bg-secondary" id="subject" name="subject" placeholder="Subject" required>
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control border-0 bg-secondary" placeholder="Leave a message here" id="message" name="message" style="height: 200px" required></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="button" id="submitForm">Send Message</button>
                                 </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Messages</label>
-                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
-                            </div>
-                            <button type="button" id="submitForm" class="btn btn-primary w-100">Send Message</button>
+                            <div id="responseMessage" style="margin-top: 15px;"></div>
                         </form>
-                        <div id="responseMessage"></div>
                     </section>
-                    
+
                     <!-- Contact End -->
 
                     <!-- Footer Start -->
